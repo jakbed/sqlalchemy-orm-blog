@@ -12,6 +12,7 @@ def main():
     session.delete(author)
     session.commit()
 
+
     assert session.query(Author).get(12) is None, "Author not deleted"
 
     articles = session.query(Article).filter_by(
