@@ -1,14 +1,10 @@
-import fake as fake
-
 from models import Author, Article
 from session import session
 from faker import Faker
 
 
 def main():
-    author = session.query(Author).filter.by(
-        user_name="sammy"
-    )
+    author = session.query(Author).get(9)
     fake = Faker()
     article = Article(
         title=fake.sentence(),
